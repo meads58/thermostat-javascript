@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #CCE3B1;
+  color: #030303;
+  background-image: url('./images/background.jpg');
+ }
+
+#temperature{
+  font-size: 176px;
+  position: absolute;
+  align-items: center;
+  top: 150px;
+  margin-left: 150px;
+}
+
+#reset{
+  top: 10px;
+  margin-left: 15px;
+  font-size: 110%;
+}
+
+
+
+#decreaseTemp{
+  margin-left: 250px;
+  background-image: url('./images/cold.jpg');
+  display: block;
+  margin: 0 auto;
+  text-indent: -9999px;
+  width: 500px;
+  height: 450px;
+}
+
+#increaseTemp{
+  margin-left: 50px;
+  background-image: url('./images/hot.jpg');
+   display: block;
+  margin: 0 auto;
+  text-indent: -9999px;
+  width: 600px;
+  height: 380px;
+}
