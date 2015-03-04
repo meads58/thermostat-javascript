@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Thermostat</title>
+
+</head>
+
+<body>
+
+  <main>
+    <h1 id='temperature'>??</h1>
+    <p>
+      <a href='#' id='increaseTemp'>Up</a>
+      <a href='#' id='decreaseTemp'>Down</a>
+    </p>
+    <p><a href='#'>Reset</a></p>
+     <p>Powersave Mode</p>
+     <p>
+      <a href='#'>On</a>
+      <a href='#'>Off</a>
+    </p>
+
+  </main>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="src/Thermostat.js"></script>
+<script>
+
+var thermostat = new Thermostat();
+$(document).ready(function(){
+  $('#temperature').text(thermostat.temperature);
+  $( "#increaseTemp" ).on('click', function(e) {
+    e.preventDefault();
+    thermostat.up();
+    $('#temperature').text(thermostat.temperature);
+    console.log("working");
+  });
+
+});
+
+</script>
+
+</body>
+</html>
