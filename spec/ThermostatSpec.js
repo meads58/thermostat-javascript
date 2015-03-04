@@ -42,6 +42,12 @@ describe('Thermostat', function() {
       };
     };
 
+    function raiseThirteen() {
+      for (var i=0; i <13; i++) {
+        thermostat.up();
+      };
+    };
+
     it('is on by default', function() {
       expect(thermostat.powerSave).toBe(true);
     });
@@ -51,11 +57,16 @@ describe('Thermostat', function() {
       expect(thermostat.powerSave).toBe(false);
     });
 
-    it('max temperature is 25 degrees', function() {
+    it('max temperature is 25 degrees with powersave on', function() {
       raiseSix();
       expect(thermostat.temperature).toEqual(25);
     });
 
+    it('max temperature is 32 degrees with powersave off', function() {
+      thermostat.saveOff();
+      raiseThirteen();
+      expect(thermostat.temperature).toEqual(32);
+    });
 
   });
 
