@@ -70,4 +70,25 @@ describe('Thermostat', function() {
 
   });
 
+
+  describe('reset button', function() {
+
+    it('sets the temperature to 20', function() {
+      thermostat.up();
+      thermostat.resetButton();
+      expect(thermostat.temperature).toEqual(20);
+    });
+
+  });
+
 });
+
+
+
+
+
+
+
+
+
+

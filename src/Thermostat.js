@@ -5,7 +5,12 @@ var Thermostat = function() {
 
 Thermostat.prototype.up = function() {
   if (this.powerSave === true && this.temperature <25 ) {
-  this.temperature += 1;
+    this.temperature += 1;
+    }
+  else{
+    if(this.powerSave === false && this.temperature < 32) {
+      this.temperature +=1 ;
+    };
   };
 };
 
