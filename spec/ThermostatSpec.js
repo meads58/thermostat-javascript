@@ -71,9 +71,15 @@ describe('Thermostat', function() {
     it('change max temperature when switched on', function() {
       thermostat.saveOff();
       raiseSix();
-      thermostat.SaveOn();
+      thermostat.saveOn();
       expect(thermostat.temperature).toEqual(25);
+    });
 
+    it('does not change temperature if under 25 when switched on', function() {
+      thermostat.saveOff();
+      thermostat.up();
+      thermostat.saveOn();
+      expect(thermostat.temperature).toEqual(21);
     });
 
   });
@@ -84,6 +90,36 @@ describe('Thermostat', function() {
       thermostat.up();
       thermostat.resetButton();
       expect(thermostat.temperature).toEqual(20);
+    });
+
+  });
+
+  describe('colour display', function() {
+
+    function dropThree() {
+      for (var i=0; i <3; i++) {
+        thermostat.down();
+      };
+    };
+
+    function raiseFive() {
+      for (var i=0; i <5; i++) {
+        thermostat.up();
+      };
+    };
+
+    it('is yellow when temperature is less than 25', function() {
+      expect(thermostat.colour()).toEqual("yellow");
+    });
+
+    it('is green when less than 18', function() {
+      dropThree();
+      expect(thermostat.colour()).toEqual("green");
+    });
+
+    it('is red if temperature is 25 or greater', function() {
+      raiseFive();
+      expect(thermostat.colour()).toEqual("red");
     });
 
   });
