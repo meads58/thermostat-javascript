@@ -26,42 +26,7 @@
 
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="src/Thermostat.js"></script>
-<script>
-
-var thermostat = new Thermostat();
-$(document).ready(function(){
-  $('#temperature').text(thermostat.temperature);
-  $("#increaseTemp").on('click', function(e) {
-    e.preventDefault();
-    thermostat.up();
-    $('#temperature').text(thermostat.temperature);
-  });
-  $("#decreaseTemp").on('click', function(e) {
-    e.preventDefault();
-    thermostat.down();
-    $('#temperature').text(thermostat.temperature);
-  });
-  $("#reset").on('click', function(e) {
-    e.preventDefault();
-    thermostat.resetButton();
-    $('#temperature').text(thermostat.temperature);
-  });
-  $('#powerOn').on('click', function(e) {
-    e.preventDefault();
-    thermostat.saveOn();
-    $('#temperature').text(thermostat.temperature);
-    $('#currentMode').text("On");
-  });
-  $('#powerOff').on('click', function(e) {
-    e.preventDefault();
-    thermostat.saveOff();
-    $('#temperature').text(thermostat.temperature);
-    $('#currentMode').text("Off");
-  });
-
-});
-
-</script>
+<script src="src/interface.js"></script>
 
 </body>
 </html>
