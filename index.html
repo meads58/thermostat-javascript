@@ -14,7 +14,7 @@
       <a href='#' id='increaseTemp'>Up</a>
       <a href='#' id='decreaseTemp'>Down</a>
     </p>
-    <p><a href='#'>Reset</a></p>
+    <p><a href='#' id='reset'>Reset</a></p>
      <p>Powersave Mode</p>
      <p>
       <a href='#'>On</a>
@@ -30,11 +30,20 @@
 var thermostat = new Thermostat();
 $(document).ready(function(){
   $('#temperature').text(thermostat.temperature);
-  $( "#increaseTemp" ).on('click', function(e) {
+  $("#increaseTemp").on('click', function(e) {
     e.preventDefault();
     thermostat.up();
     $('#temperature').text(thermostat.temperature);
-    console.log("working");
+  });
+  $("#decreaseTemp").on('click', function(e) {
+    e.preventDefault();
+    thermostat.down();
+    $('#temperature').text(thermostat.temperature);
+  });
+  $("#reset").on('click', function(e) {
+    e.preventDefault();
+    thermostat.resetButton();
+    $('#temperature').text(thermostat.temperature);
   });
 
 });
