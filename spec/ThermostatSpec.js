@@ -38,8 +38,12 @@ describe('Thermostat', function() {
 
     it('is on by default', function() {
       expect(thermostat.powerSave).toBe(true);
-
     });
+    it('can be turned off', function() {
+      thermostat.saveOff();
+      expect(thermostat.powerSave).toBe(false);
+    });
+
 
   });
 
