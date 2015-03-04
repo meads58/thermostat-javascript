@@ -7,6 +7,12 @@ describe('Thermostat', function() {
        thermostat = new Thermostat();
     });
 
+    function dropEleven() {
+      for (var i=0; i <11; i++) {
+        thermostat.down();
+      };
+    };
+
     it('should start at 20 degrees', function() {
       expect(thermostat.temperature).toEqual(20);
     });
@@ -19,6 +25,11 @@ describe('Thermostat', function() {
     it('should be able to decrease temperature by 1', function() {
       thermostat.down();
       expect(thermostat.temperature).toEqual(19);
+    });
+
+    it('should have a minimum temperature of 10', function() {
+      dropEleven();
+      expect(thermostat.temperature).toEqual(10);
     });
 
 
