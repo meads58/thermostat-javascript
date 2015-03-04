@@ -68,8 +68,15 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(32);
     });
 
-  });
+    it('change max temperature when switched on', function() {
+      thermostat.saveOff();
+      raiseSix();
+      thermostat.SaveOn();
+      expect(thermostat.temperature).toEqual(25);
 
+    });
+
+  });
 
   describe('reset button', function() {
 
