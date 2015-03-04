@@ -1,11 +1,11 @@
 describe('Thermostat', function() {
   var thermostat;
 
-  describe('temperature control', function() {
-
-    beforeEach(function(){
+   beforeEach(function(){
        thermostat = new Thermostat();
     });
+
+  describe('temperature control', function() {
 
     function dropEleven() {
       for (var i=0; i <11; i++) {
@@ -32,6 +32,14 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(10);
     });
 
+  });
+
+  describe('Power saving mode', function() {
+
+    it('is on by default', function() {
+      expect(thermostat.powerSave).toBe(true);
+
+    });
 
   });
 
