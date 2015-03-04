@@ -1,14 +1,16 @@
 var Thermostat = function() {
   this.temperature = 20;
   this.powerSave = true;
+  this.powerSaveMax = 25
+  this.maxTemp = 32
 };
 
 Thermostat.prototype.up = function() {
-  if (this.powerSave === true && this.temperature <25 ) {
-    this.temperature += 1;
+  if (this.powerSave === true) {
+    this.powerSaveUp();
     }
   else{
-    if(this.powerSave === false && this.temperature < 32) {
+    if(this.powerSave === false && this.temperature < this.maxTemp) {
       this.temperature +=1 ;
     };
   };
@@ -26,9 +28,7 @@ Thermostat.prototype.saveOff = function() {
 
 Thermostat.prototype.saveOn = function() {
   this.powerSave = true;
-  if (this.temperature > 25) {
-    this.temperature = 25;
-  };
+  this.temperature = (this.temperature > this.powerSaveMax) ? this.powerSaveMax : this.temperature;
 };
 
 Thermostat.prototype.resetButton = function() {
@@ -45,4 +45,13 @@ Thermostat.prototype.colour = function() {
   else{
     return "yellow";
   };
+};
+
+Thermostat.prototype.powerSaveUp = function() {
+   if(this.temperature < this.powerSaveMax ) {
+    this.temperature += 1;};
+};
+
+Thermostat.prototype.generalUp = function() {
+
 };
