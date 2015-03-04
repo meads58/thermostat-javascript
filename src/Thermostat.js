@@ -13,3 +13,7 @@ Thermostat.prototype.down = function() {
   };
 };
 
+Thermostat.prototype.saveOff = function() {
+  this.powerSave = false;
+};
+

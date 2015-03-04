@@ -36,12 +36,24 @@ describe('Thermostat', function() {
 
   describe('Power saving mode', function() {
 
+    function raiseSix() {
+      for (var i=0; i <6; i++) {
+        thermostat.up();
+      };
+    };
+
     it('is on by default', function() {
       expect(thermostat.powerSave).toBe(true);
     });
+
     it('can be turned off', function() {
       thermostat.saveOff();
       expect(thermostat.powerSave).toBe(false);
+    });
+
+    it('max temperature is 25 degrees', function() {
+      raiseSix();
+      expect(thermostat.temperature).toEqual(25);
     });
 
 
