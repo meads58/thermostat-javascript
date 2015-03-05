@@ -31,6 +31,7 @@ $(document).ready(function(){
     thermostat.saveOn();
     $('#temperature').text(thermostat.temperature);
     $('#currentMode').text("On");
+    $("#currentMode").css('color', "red" )
   });
 
   $('#powerOff').on('click', function(e) {
@@ -38,6 +39,7 @@ $(document).ready(function(){
     thermostat.saveOff();
     $('#temperature').text(thermostat.temperature);
     $('#currentMode').text("Off");
+    $("#currentMode").css('color', "black" )
   });
 
 });

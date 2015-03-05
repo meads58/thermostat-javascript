@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500);
+@import url(http://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(http://fonts.googleapis.com/css?family=Nosifer);
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family:'Nosifer';
+  /*font-family: 'Roboto', sans-serif;*/
   background-color: #CCE3B1;
   color: #030303;
   background-image: url('./images/background.jpg');
@@ -15,30 +18,74 @@ body {
   margin-left: 150px;
 }
 
-#reset{
-  top: 10px;
-  margin-left: 15px;
-  font-size: 110%;
+img.resize{
+  /*  width:540px;  you can use %
+    height: auto;
+    img {*/
+   width: auto;
+   max-height: 100%;
+
 }
 
+button{
+  font-family:'Nosifer';
+  padding: 5px 25px;
+}
 
+#reset{
+  font-family:'Nosifer';
+  top: 5px;
+  margin-left: 15px;
+  font-size: 30px;
+}
+
+header{
+  text-align: center;
+  font-family:'Sigmar One';
+  color: #F7E414;
+  font-size: 50px;
+
+}
+
+aside {
+    float: left;
+    font-size: 50px;
+    top: 150px;
+    height:100%;
+    width:50%;
+    padding:5px;
+    /*margin-left: 3%;*/
+}
+
+.controllers{
+  overflow: hidden;
+  margin: 0 1.5%;
+}
+
+.floated-imgs{
+  float: right;
+}
+
+.floated-imgs a{
+  display: block
+
+}
+
+main{
+height: 350px;
+
+}
 
 #decreaseTemp{
-  margin-left: 250px;
   background-image: url('./images/cold.jpg');
-  display: block;
-  margin: 0 auto;
   text-indent: -9999px;
-  width: 500px;
+  width: 450px;
   height: 450px;
 }
 
 #increaseTemp{
-  margin-left: 50px;
   background-image: url('./images/hot.jpg');
-   display: block;
-  margin: 0 auto;
   text-indent: -9999px;
   width: 600px;
-  height: 380px;
+  height: 300px;
 }

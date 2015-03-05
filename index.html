@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<body>
 <head>
 
   <title>Thermostat</title>
@@ -7,24 +8,29 @@
   <link rel="stylesheet" type="text/css" href="css/application.css">
 
 </head>
+<header>
+  <h1>DR GONZO'S THERMO-METER</h1>
+</header>
 
-<body>
 
   <main>
     <h1 id='temperature'>??</h1>
+      <div class='controllers'>
+        <div class='floated-imgs'>
+          <a href='#' id='increaseTemp'>+</a>
+          <a href='#' id='decreaseTemp'>-</a>
+        </div>
+      </div>
+  </main>
+  <aside>
+    <p>Powersave Mode is: </p>
+    <p id='currentMode'>On</p>
     <p>
-      <a href='#' id='increaseTemp'>+</a>
-      <a href='#' id='decreaseTemp'>-</a>
-    </p>
-    <p><a href='#' id='reset'><button type="button">Reset</button></a></p>
-     <p>Powersave Mode is </p>
-     <p id='currentMode'>On</p>
-     <p>
       <a href='#' id='powerOn'>On</a>
       <a href='#' id='powerOff'>Off</a>
     </p>
-
-  </main>
+    <p><a href='#' id='reset'><button type="button">Reset</button></a></p>
+  </aside>
 
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="src/Thermostat.js"></script>
