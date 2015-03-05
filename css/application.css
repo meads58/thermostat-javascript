@@ -4,14 +4,21 @@
 
 body {
   font-family:'Nosifer';
-  /*font-family: 'Roboto', sans-serif;*/
   background-color: #CCE3B1;
   color: #030303;
   background-image: url('./images/background.jpg');
  }
 
+.gonzo{
+  font-size:80px;
+}
+
+#currentMode{
+color: red;
+}
+
 #temperature{
-  font-size: 176px;
+  font-size: 250px;
   position: absolute;
   align-items: center;
   top: 150px;
@@ -19,17 +26,15 @@ body {
 }
 
 img.resize{
-  /*  width:540px;  you can use %
-    height: auto;
-    img {*/
    width: auto;
    max-height: 100%;
-
 }
 
 button{
   font-family:'Nosifer';
   padding: 5px 25px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 #reset{
@@ -44,17 +49,15 @@ header{
   font-family:'Sigmar One';
   color: #F7E414;
   font-size: 50px;
-
 }
 
 aside {
-    float: left;
-    font-size: 50px;
-    top: 150px;
-    height:100%;
-    width:50%;
-    padding:5px;
-    /*margin-left: 3%;*/
+  float: left;
+  font-size: 50px;
+  top: 150px;
+  height:100%;
+  width:50%;
+  padding:5px;
 }
 
 .controllers{
@@ -67,13 +70,11 @@ aside {
 }
 
 .floated-imgs a{
-  display: block
-
+  display: block;
 }
 
 main{
-height: 350px;
-
+  height: 350px;
 }
 
 #decreaseTemp{
